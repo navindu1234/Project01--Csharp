@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplication1.Pages.TestModel
+
+<h2>Enter Your Name</h2>
+
+<form method="post">
+    <label>First Name:</label>
+    <input asp-for="FirstName" /><br />
+    <label>Last Name:</label>
+    <input asp-for="LastName" /><br />
+    <button type="submit">Save</button>
+</form>
+
+@if (Model.Message != null)
+{
+    <p style="color:green">@Model.Message</p>
+}
